@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>0721 5번</title>
+    <!-- 
+        1. 입력창으로부터 정수를 입력받아서 입력 받은 수의 팩토리얼을 출력
+        입력 : 정수입력 : 5
+        출력 : 5! 5*4*3*2*1 = 120
+     -->
+</head>
+<body>
+    <script>
+        var num = Number(prompt("정수 입력"));
+        var str = "";
+        var result = 1;
+
+        for(var i=num; i>0; i--) {
+            str += i;
+            result *= i;
+            if(i != 1) {
+                str += " * ";
+            }
+        }
+
+        document.write(num + "!<br>" + str + " = " + result);
+
+    </script>
+</body>
+</html>

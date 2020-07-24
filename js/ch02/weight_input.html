@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>p57 체중 관리 프로그램</title>
+    <!-- 
+        1. 입력창을 통해서 이름(name), 키(height), 몸무게(weight) 3개의 값을 입력받아 변수에 저장
+        2. 표준 몸무게 계산법 : (키 - 100) * 0.9를 변수에 저장.
+        3. 나의 몸무게가 표준 몸무게보다 많거나 적다면 '적정 몸무게가 아닙니다.'
+           나의 몸무게가 표준 몸무게의 +5 또는 -5의 사이에 있다면 '적정 체중입니다.'
+     -->
+  </head>
+  <body>
+    <script>
+      var name = prompt("이름을 입력하세요.");
+      var height = parseInt(prompt("키를 입력하세요."));
+      var weight = parseInt(prompt("몸무게를 입력하세요."));
+
+      console.log(typeof height);
+
+      var calcweight = (height - 100) * 0.9;
+      console.log(calcweight);
+      if (calcweight + 5 > weight && calcweight - 5 < weight) {
+        document.write("적정 체중입니다.");
+      } else {
+        document.write("적정 몸무게가 아닙니다.");
+      }
+    </script>
+  </body>
+</html>

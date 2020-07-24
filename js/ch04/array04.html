@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        caption {
+            font-size: 24px;
+            font-weight: bolder;
+            margin-bottom: 18px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 100px auto;
+        }
+
+        tr,
+        td {
+            border: 2px solid black;
+            padding: 20px;
+            font-size: 17px;
+            text-align: center;
+        }
+
+        span {
+            font-weight: bolder;
+        }
+
+        th,
+        .blank {
+            font-weight: bolder;
+            background: linear-gradient(0deg, white, skyblue);
+            color: royalblue;
+        }
+    </style>
+    <!-- 
+        1. 학생 2차원 배열의 정보를 출력하시오.
+        2. 총점, 평균(소수점2째자리)를 기말고사 뒤에 출력하시오. 
+     -->
+</head>
+
+<body>
+    <script>
+        var student = new Array(
+            Array("이익준", "컴공", 88, 76), //이름, 전공, 중간, 기말
+            Array("양석현", "수학", 70, 83),
+            Array("채송화", "물리", 92, 95),
+            Array("안정원", "전자", 85, 92),
+            Array("김준완", "기계", 97, 88),
+        );
+
+        document.write("<div>");
+        document.write("<table>");
+        document.write("<caption>" + "학생별 성적표" + "</caption>");
+
+        document.write("<tr>" + "<th>" + "이름" + "</th>");
+        document.write("<th>" + "전공" + "</th>");
+        document.write("<th>" + "중간" + "</th>");
+        document.write("<th>" + "기말" + "</th>");
+        document.write("<th>" + "합계" + "</th>");
+        document.write("<th>" + "평균" + "</th>" + "</tr>");
+
+
+        var alltot = 0, allave = 0;
+
+        for (var i = 0; i < student.length; i++) {
+            document.write("<tr>");
+            var tot = 0, ave = 0;
+
+            tot = student[i][2] + student[i][3];
+            ave = tot / 2;
+
+            alltot += tot;
+
+            document.write("<td><span>" + student[i][0] + "</span></td>");
+            document.write("<td>" + student[i][1] + "</td>");
+            document.write("<td>" + student[i][2] + "</td>");
+            document.write("<td>" + student[i][3] + "</td>");
+            document.write("<td>" + tot + "</td>");
+            document.write("<td>" + ave.toFixed(2) + "</td>");
+            //student[i][4] = tot;
+            // alltot += tot;
+            //student[i][5] = ave.toFixed(2);
+            // student[5][2] = 2;
+            document.write("</tr>")
+        }
+
+        var midTotal = 0, finalTotal = 0;
+        for (var i = 0; i < student.length; i++) {
+            midTotal += student[i][2];
+            finalTotal += student[i][3];
+        }
+
+        var totalMiddleFinal = midTotal + finalTotal;
+
+        document.write("<tr>");
+        document.write("<td class='blank' colspan='4'>KOREAIT</td>");
+
+        document.write("<td>" + totalMiddleFinal + "</td>");
+        document.write("<td>" + (totalMiddleFinal / (student.length * 2)).toFixed(2) + "</td>");
+        document.write("</tr>");
+        document.write("</table>");
+        document.write("</div>");
+
+    </script>
+</body>
+
+</html>

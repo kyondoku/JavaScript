@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>형변환 함수</title>
+  </head>
+  <body>
+    <h3>형변환 함수</h3>
+    <p>데이터타입(자료형)을 변환하는 함수</p>
+    <p>
+      1. String() : 숫자를 문자로 변환하는 함수<br />
+      2. Number() : 문자를 숫자로<br />
+      3. Boolean() : 비논리형으로 변환하는 함수<br />
+      4. toString() : 숫자를 문
+    </p>
+
+    <script>
+      var a = "10",
+        b = 20,
+        c;
+      c = a + b; //문자 + 숫자 -> 문자열로 처리
+      console.log("결과 : " + c);
+      console.log("데이터 타입 : " + typeof c); //string
+
+      c = Number(a) + b; // 일시적으로 a의 값을 숫자로 바꿔서 더함.
+      console.log("결과 : " + c);
+      console.log("데이터 타입 : " + typeof c);
+
+      console.log("결과 : " + a);
+      console.log("데이터 타입 : " + typeof a);
+
+      var y = 100;
+      var z = String(y);
+      console.log("결과 : " + z);
+      console.log("데이터 타입 : " + typeof z);
+
+      //   논리형 : true, false 둘 중 하나
+      //   true : 문자열, 0을 제외한 모든 숫자(정수, 실수 포함)
+      //   false : 숫자 0, null, undefined
+
+      var h = Boolean("자바스크립트");
+      console.log("결과 : " + h);
+      console.log("데이터 타입 : " + typeof h);
+
+      h = Boolean(0);
+      console.log("결과 : " + h);
+      console.log("데이터 타입 : " + typeof h);
+
+      h = Boolean(-1);
+      console.log("결과 : " + h);
+      console.log("데이터 타입 : " + typeof h);
+
+      h = Boolean(null);
+      console.log("결과 : " + h);
+      console.log("데이터 타입 : " + typeof h);
+
+      h = Boolean(undefined);
+      console.log("결과 : " + h);
+      console.log("데이터 타입 : " + typeof h);
+
+      //toString() : 숫자를 문자로 변환
+      var aa = 10;
+      aa = aa.toString();
+      console.log("결과 : " + aa);
+      console.log("데이터 타입 : " + typeof aa);
+    </script>
+  </body>
+</html>

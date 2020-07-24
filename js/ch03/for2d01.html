@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중첩 for문</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        tr,
+        td {
+            text-align: center;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // cnt = 0으로 시작하면 ++cnt로!
+
+        var cnt = 1;
+        var num = 25;
+        document.write("<table>");
+
+        for (var i = 0; i < 5; i++) {
+            document.write("<tr>");
+            for (var z = 0; z < 5; z++) {
+                document.write("<td>" + cnt++ + "</td>");
+            }
+            document.write("<br>");
+            document.write("</tr>");
+        }
+
+        document.write("</table>");
+    </script>
+</body>
+
+</html>

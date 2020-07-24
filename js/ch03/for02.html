@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dan {
+            padding: 20px;
+        }
+    </style>
+
+    <!-- 
+        1. 입력창으로부터 단을 입력 받아서 해당하는 단에 구구단을 출력하는 프로그램
+          입력 : 구구단의 단 입력 : 5
+          출력 : 5단에 대항하는 구구단을 출력
+
+        2. 단 전체는 div 구성
+        - 단 제목은 h3
+        - display는 inline-block
+        - padding: 20px
+        - margin: 15px
+        - 줄간격 : 30px
+     -->
+</head>
+
+<body>
+    <script>
+        var dan = prompt("단을 입력하세요.");
+
+        document.write("<div class='dan'>");
+        document.write("<h3>" + dan + "단</h3>");
+        for (var j = 1; j < 10; j++) {
+            document.write(dan + " X " + j + " = " + dan * j);
+            document.write("<br>");
+        }
+        document.write("</div>");
+    </script>
+</body>
+
+</html>

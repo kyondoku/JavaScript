@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>0721 1번</title>
+    <!-- 
+        1. 월을 입력받아서 계절을 판별하는 프로그램
+        입력 : 좋아하는 월을 입력하세요.
+        출력 : 5월은 봄입니다. 이미지도 출력
+        2. siwtch-case문으로
+     -->
+</head>
+<body>
+    <script>
+        var month = Number(prompt("좋아하는 월을 입력하세요."));
+        var season = "";
+        var img = "";
+
+        switch(month) {
+            case 3: case 4: case 5: 
+            season = "봄";
+            img = "<img src='spring.png' alt='봄'>"; break;
+            case 6: case 7: case 8: 
+            season = "여름";
+            img = "<img src='summer.png' alt='여름'>"; break;
+            case 9: case 10: case 11: 
+            season = "가을";
+            img = "<img src='fall.png' alt='가을'>"; break;
+            case 12: case 1: case 2: 
+            season = "겨울";
+            img = "<img src='winter.png' alt='겨울'>"; break;
+            default: season = "잘못된 달";
+        }
+        
+        document.write(img + "<br>" + month + "월은 " + season + "입니다.");
+    </script>
+    
+</body>
+</html>
